@@ -45,9 +45,10 @@
   </head>
   <body>
     <div
-      x-data="{ rocket: false, sensors: false, surface: false, display: true }"
+      x-data="{ rocket: false, sensors: false, surface: false, display: true, page: location.hash.slice(1) || 'main' }"
       class="control-grid"
       x-cloak
+      @hashchange.window="page = location.hash.slice(1) || 'main'"
     >
       <div class="control-row-1">
         <div class="rocket component">
@@ -69,7 +70,14 @@
       <div class="control-row-2">
         <div class="display component">
           <img src="images/display.png" alt="Display" />
+
           <div class="display-overlay" x-show="!display"></div>
+
+          <div class="display-content" x-show="display">
+            <div x-show="page === 'home'">Main</div>
+            <div x-show="page === 'music'">Music</div>
+            <div x-show="page === 'shows'">Shows</div>
+          </div>
         </div>
 
         <div class="nav">

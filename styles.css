@@ -73,6 +73,19 @@ img {
   height: 600px;
 }
 
+.display-content {
+  position: absolute;
+  bottom: 0px;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
 .rocket-overlay {
   position: absolute;
   top: 14%;
