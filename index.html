@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Band Name</title>
+    <meta name="description" content="" />
+
+    <!-- Uncomment once you have a domain -->
+    <!-- <link rel="canonical" href="https://www.example.com/"> -->
+
+    <!-- Link previews (Facebook, Discord, iMessage, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Band Name" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Browser UI color on mobile -->
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Hides Alpine-controlled elements until Alpine has loaded -->
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+
+    <!-- Plugins must load before Alpine core -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.14.9/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      x-data="{ rocket: false, sensors: false, surface: false, display: true }"
+      class="control-grid"
+      x-cloak
+    >
+      <div class="control-row-1">
+        <div class="rocket component">
+          <img src="images/rocket.png" alt="Rocket" />
+          <div class="rocket-overlay" x-show="!rocket"></div>
+        </div>
+
+        <div class="gauge component">
+          <img src="images/gauge.png" alt="Gauge" />
+          <div class="sensors-overlay" x-show="!sensors"></div>
+        </div>
+
+        <div class="surface component">
+          <img src="images/heart.png" alt="Surface" />
+          <div class="surface-overlay" x-show="!surface"></div>
+        </div>
+      </div>
+
+      <div class="control-row-2">
+        <div class="display component">
+          <img src="images/display.png" alt="Display" />
+          <div class="display-overlay" x-show="!display"></div>
+        </div>
+
+        <div class="nav">
+          <a href="#home" class="nav-button">
+            <img src="images/toggle-green.png" alt="Home Button" />
+            <div class="nav-label">Main</div>
+          </a>
+
+          <a href="#music" class="nav-button">
+            <img src="images/toggle-green.png" alt="About Button" />
+            <div class="nav-label">Music</div>
+          </a>
+
+          <a href="#shows" class="nav-button">
+            <img src="images/toggle-orange.png" alt="Contact Button" />
+            <div class="nav-label">Shows</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="control-row-3">
+        <div class="toggles">
+          <label class="toggle">
+            <input type="checkbox" x-model="rocket" />
+            <img
+              src="images/toggle.png"
+              alt="Rocket Toggle"
+              :class="{ 'toggle-on': rocket, 'toggle-off': !rocket }"
+            />
+            <div class="toggle-label">Rockets</div>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" x-model="sensors" />
+            <img
+              src="images/toggle.png"
+              alt="Rocket Toggle"
+              :class="{ 'toggle-on': sensors, 'toggle-off': !sensors }"
+            />
+            <div class="toggle-label">Sensors</div>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" x-model="surface" />
+            <img
+              src="images/toggle.png"
+              alt="Rocket Toggle"
+              :class="{ 'toggle-on': surface, 'toggle-off': !surface }"
+            />
+            <div class="toggle-label">surface</div>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" x-model="display" />
+            <img
+              src="images/toggle.png"
+              alt="Rocket Toggle"
+              :class="{ 'toggle-on': display, 'toggle-off': !display }"
+            />
+            <div class="toggle-label">Display</div>
+          </label>
+        </div>
+
+        <img src="images/logo.png" alt="Band Logo" class="logo" />
+      </div>
+    </div>
+  </body>
+</html>

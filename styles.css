@@ -1,0 +1,136 @@
+body {
+  background-image: url("images/bg.png");
+}
+
+.control-grid {
+  width: 1024px;
+  margin: 60px auto;
+}
+
+.control-row-1 {
+  display: flex;
+  gap: 20px;
+}
+
+.control-row-2 {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.control-row-3 {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.toggles {
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.toggle-on {
+  /* no change */
+}
+
+.toggle-off {
+  transform: rotate(180deg) translateY(-30px);
+}
+
+.toggle-label {
+  margin-top: 24px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: black;
+}
+
+.component {
+  position: relative;
+}
+
+.display {
+  height: 600px;
+}
+
+.rocket-overlay {
+  position: absolute;
+  top: 14%;
+  left: 5%;
+  bottom: 20%;
+  right: 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sensors-overlay {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  bottom: 18%;
+  right: 30%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.surface-overlay {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 20%;
+  right: 18%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.display-overlay {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  bottom: 8%;
+  right: 8%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-button {
+  width: 80px;
+}
+
+.nav-label {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: black;
+}
+
+.logo {
+  width: 300px;
+  height: 140px;
+}
